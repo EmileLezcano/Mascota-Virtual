@@ -1,0 +1,41 @@
+mascotas_db
+
+CREATE TABLE mascotas(
+	id SERIAL PRIMARY KEY,
+	nombre VARCHAR(50) NOT NULL,
+	tipo VARCHAR(50),
+	fecha_adopcion TIMESTAMP
+);
+
+
+INSERT INTO mascotas (nombre, tipo, fecha_adopcion) VALUES ('Doky','perro','2023-10-01 10:00:00');
+
+SELECT * FROM mascotas;
+
+----------------------------------------------------------------------------------------------------
+
+alimentacion_db
+
+CREATE TABLE alimentacion(
+	id SERIAL PRIMARY KEY,
+	id_mascota INT NOT NULL,
+	fecha_alimentacion TIMESTAMP
+);
+
+INSERT INTO alimentacion (id_mascota, fecha_alimentacion) VALUES ('1','2023-10-01 10:05:00');
+
+SELECT * FROM alimentacion;
+
+---------------------------------------------------------------------------------------------------
+
+felicidad_db
+
+CREATE TABLE felicidad(
+	id SERIAL PRIMARY KEY,
+	id_mascota INT NOT NULL,
+	nivel_felicidad INT NOT NULL
+);
+
+INSERT INTO felicidad (id_mascota, nivel_felicidad) VALUES ('1','100');
+
+SELECT * FROM felicidad;
